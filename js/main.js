@@ -13,8 +13,10 @@ $('#order-form').validate({
 
  // I worked through the 'To-Do's from the top down, my steps
  // are documented in 'index.html'.
+
+ // Worked with Sandra in lab and narrowed problem to missing commas. Added commas, problem fixed.
   rules: {
-    "your-name": {
+   "your-name": {
       required: true,
       maxlength: 128
     },
@@ -53,34 +55,35 @@ $('#order-form').validate({
       minlength: 16,
       maxlength: 16,
       creditcard: true
-    }
+    },
 
+// Fixed "expiry-month" requirements, notes in 'index.html'.
     "expiry-month": {
       required: true
-    }
+    },
 
     "expiry-year": {
       required: true
-    }
+    },
 
     "cvv": {
       required: true,
       digits: true,
       minlength: 3,
       maxlength: 3
-    }
-  }
+    },
 
   "shipping-method": {
     required: true
-  }
+  },
 
   "comments": {
       required: false,
       maxlength: 500
   }
+  },
 
-  messages: {
+messages: {
     "your-name": {
       required: "Please enter your name.",
       maxlength: "Names may not be longer than 128 characters"
@@ -109,23 +112,22 @@ $('#order-form').validate({
     },
 
     "card-holder-name": {
-      required: "Please enter your name as it appears on your credit card.",
-      equalto:
+      required: "Please enter your name as it appears on your credit card."
     },
 
     "card-number": {
       required: "Please enter your credit card number.",
       minlength: "Credit card number does not contain enough digits.",
       maxlength: "Credit card number contains too many digits."
-    }
+    },
 
     "expiry-month": {
       required: "Please enter your credit card expiration month."
-    }
+    },
 
     "expiry-year": {
       required: "Please enter your credit card expiration year."
-    }
+    },
 
     "cvv": {
       required: "Please enter your CVV (the three digit number on the back of your card).",
@@ -139,7 +141,7 @@ $('#order-form').validate({
  });
 
 
+$('label span.glyphicon').tooltip();
 });
 
-$('label span.glyphicon').tooltip();
-)};
+
